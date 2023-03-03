@@ -1,23 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/header';
+import ClientRegistrationForm from './components/clientregistrationForm'
+import { BrowserRouter as Router} from "react-router-dom";
+import SupplierRegistrationForm from './components/supplierregistrationForm'
+import LoginForm from './components/login'
+import { Routes ,Route } from 'react-router-dom';
+import UploadInvoiceForm from './components/uploadinvoiceForm';
+import ViewInvoiceForm from './components/viewinvoiceForm';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <Header/>
+    
+
+       <Router>
+      <Routes>
+        <Route path ="/" element={<ClientRegistrationForm />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path ="/supplier" element={<SupplierRegistrationForm />} />
+        <Route path ="/upload-invoice" element={<UploadInvoiceForm />} />
+        <Route path ="/view-invoice" element={<ViewInvoiceForm />} />
+      </Routes>
+    </Router>
     </div>
   );
 }

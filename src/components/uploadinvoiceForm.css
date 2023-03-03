@@ -1,0 +1,38 @@
+.upload-invoice-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-group {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  label {
+    margin-right: 10px;
+  }
+
+  .form-group1 select {
+    margin-right: 10px;
+
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    
+  }
+
+  label1 {
+
+    position: absolute;
+    left: 600px;
+  }
+
+  
+
+  
+
+  
+  
